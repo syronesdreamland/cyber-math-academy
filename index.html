@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Cyber·Math Academy — Learning Tracker</title>
+  <meta name="description" content="Structured self-paced learning tracker for Cybersecurity (90-day plan) and Mathematics (Professor Dave Explains)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <path d="M16 3 L29 27 H3 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="16" cy="20" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Cyber·Math <span>Academy</span></div>
+          <div class="brand-tag">Structured Learning Tracker</div>
+        </div>
+      </div>
+
+      <div class="header-stats" id="headerStats" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Self-Paced Curriculum</span>
+      <h1 class="hero-title">Dua jalur belajar,<br />satu <span class="accent">tracker</span> yang rapi.</h1>
+      <p class="hero-sub">
+        Lacak progres belajar Cybersecurity (rencana 90 hari) dan Matematika (Professor Dave Explains).
+        Setiap video &amp; materi menjadi item ceklis yang tersimpan di perangkat Anda — berfungsi di laptop maupun ponsel.
+      </p>
+
+      <div class="hero-cards">
+        <button class="track-card track-card--cyber" data-track="cyber">
+          <div class="track-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 L20 6 V11 C20 16 16.5 19.5 12 21 C7.5 19.5 4 16 4 11 V6 Z"/>
+              <path d="M9 11 L11 13 L15 9"/>
+            </svg>
+          </div>
+          <div class="track-card-body">
+            <div class="track-card-label">Cybersecurity</div>
+            <div class="track-card-title">90-Day Study Plan</div>
+            <div class="track-card-meta" id="cyberMeta">…</div>
+          </div>
+          <div class="track-card-arrow" aria-hidden="true">→</div>
+        </button>
+
+        <button class="track-card track-card--math" data-track="math">
+          <div class="track-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7 H20 M8 5 V9 M16 5 V9"/>
+              <path d="M4 15 H20 M8 13 V17 M16 13 V17"/>
+            </svg>
+          </div>
+          <div class="track-card-body">
+            <div class="track-card-label">Mathematics</div>
+            <div class="track-card-title">Professor Dave Explains</div>
+            <div class="track-card-meta" id="mathMeta">…</div>
+          </div>
+          <div class="track-card-arrow" aria-hidden="true">→</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main" class="container">
+    <!-- Cyber section -->
+    <section id="cyber" class="track-panel">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow eyebrow--cyber">Cybersecurity</span>
+          <h2>90-Day Study Plan</h2>
+          <p class="panel-sub">Struktur 11 fase dari fondasi jaringan hingga ethical hacking. Klik setiap node untuk membuka checklist hariannya.</p>
+        </div>
+        <div class="panel-progress" id="cyberProgress"></div>
+      </div>
+
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot done"></span>Selesai</span>
+        <span class="legend-item"><span class="legend-dot active"></span>Sedang dikerjakan</span>
+        <span class="legend-item"><span class="legend-dot pending"></span>Belum</span>
+      </div>
+
+      <div class="graph" id="cyberGraph"></div>
+
+      <div class="phase-detail" id="cyberDetail"></div>
+    </section>
+
+    <!-- Math section -->
+    <section id="math" class="track-panel">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow eyebrow--math">Mathematics</span>
+          <h2>Professor Dave Explains</h2>
+          <p class="panel-sub">Tujuh playlist dari algebra hingga advanced math. Setiap playlist adalah node yang bisa Anda klik untuk membuka daftar videonya.</p>
+        </div>
+        <div class="panel-progress" id="mathProgress"></div>
+      </div>
+
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot done"></span>Selesai</span>
+        <span class="legend-item"><span class="legend-dot active"></span>Sedang dikerjakan</span>
+        <span class="legend-item"><span class="legend-dot pending"></span>Belum</span>
+      </div>
+
+      <div class="graph graph--math" id="mathGraph"></div>
+
+      <div class="phase-detail" id="mathDetail"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Cyber·Math Academy</div>
+      <div class="footer-note">
+        Sumber: <a href="https://github.com/farhanashrafdev/90DaysOfCyberSecurity" target="_blank" rel="noopener">90DaysOfCyberSecurity</a> ·
+        <a href="https://www.youtube.com/@ProfessorDaveExplains" target="_blank" rel="noopener">Professor Dave Explains</a> ·
+        <a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a>
+      </div>
+      <div class="footer-reset">
+        <button class="btn-ghost" id="resetBtn">Reset progres</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
